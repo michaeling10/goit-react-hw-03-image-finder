@@ -1,4 +1,5 @@
-import { Component } from "react";
+import { Component } from 'react';
+import './styles/Modal-module.css';
 
 class Modal extends Component {
   componentDidMount() {
@@ -9,23 +10,24 @@ class Modal extends Component {
     window.removeEventListener('keydown', this.handleKeyDown);
   }
 
-  handleKeyDown = (e) => {
+  handleKeyDown = e => {
     if (e.code === 'Escape') {
       this.props.onClose();
     }
   };
 
-  handleBackdropClick = (event) => {
+  handleBackdropClick = event => {
     if (event.currentTarget === event.target) {
       this.props.onClose();
     }
   };
 
   render() {
+    const { largeImageURL } = this.props;
     return (
       <div className="overlay" onClick={this.handleBackdropClick}>
         <div className="modal">
-          <img src={this.props.largeImageURL} alt="" />
+          <img src={largeImageURL} alt="" />
         </div>
       </div>
     );
