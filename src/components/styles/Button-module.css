@@ -1,0 +1,19 @@
+.btn-load-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.load-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 700;
+  background-color: rgba(255, 255, 0, 0.527);
+  cursor: pointer;
+  height: 50px;
+  width: 200px;
+  border-radius: 25px;
+}
